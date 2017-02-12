@@ -9,6 +9,9 @@ import { SignInComponent } from '../sign-in/sign-in.component';
 })
 export class HeaderComponent implements OnInit {
 
+  menu: boolean = false;
+  offset: number = 56; // TODO: Grab height of nav dynamically
+
   constructor(private _dialog: MdDialog) { }
 
   ngOnInit() {
@@ -20,6 +23,10 @@ export class HeaderComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       console.log(result);
     })
+  }
+
+  toggleMenu() {
+    this.menu = !this.menu;
   }
 
 }

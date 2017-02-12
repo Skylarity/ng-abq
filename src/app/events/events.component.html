@@ -1,12 +1,6 @@
 <div class="title">
 	<h1>Event Calendar</h1>
 </div>
-<!-- <md-grid-list cols="4">
-	<md-grid-tile *ngFor="let event of events; let i = index">
-		
-	</md-grid-tile>
-</md-grid-list> -->
-
 <div class="event-list">
 	<md-card class="event" *ngFor="let event of events; let i = index">
 		<h2><md-icon>event</md-icon> {{ event.date | date }}</h2>
