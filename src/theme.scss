@@ -8,7 +8,7 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue.
 $ng-app-primary: md-palette($md-red);
-$ng-app-accent: md-palette($md-grey, A200, A100, A400);
+$ng-app-accent: md-palette($md-green, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
 $ng-app-warn: md-palette($md-red);

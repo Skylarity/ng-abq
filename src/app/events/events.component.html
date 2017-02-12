@@ -1,10 +1,25 @@
 <div class="title">
 	<h1>Event Calendar</h1>
 </div>
-<div class="event-list">
+<div class="calendar-container">
+	<md-card class="calendar-day" *ngFor="let event of events; let i = index">
+		<span class="date weekday">{{ event.date | date:"EEEE" }}, </span>
+		<span class="date month">{{ event.date | date:"MMMM" }}</span>
+		<span class="date day">{{ event.date | date:"d" }}</span>
+		<span class="date year">{{ event.date | date:"y" }}</span>
+		<hr>
+		<h2 class="topic">{{ event.topic }}</h2>
+		<p class="description">{{ event.description }}</p>
+		<div class="attend">
+			<p><md-icon>place</md-icon> {{ event.location }}</p>
+			<md-checkbox [checked]="event.attending" (change)="attendEvent(i)">Going</md-checkbox>
+		</div>
+	</md-card>
+</div>
+<!-- <div class="event-list">
 	<md-card class="event" *ngFor="let event of events; let i = index">
 		<h2><md-icon>event</md-icon> {{ event.date | date }}</h2>
 		<p><md-icon>place</md-icon> {{ event.location }}</p>
 		<md-checkbox [checked]="event.attending" (change)="attendEvent(i)">Going</md-checkbox>
 	</md-card>
-</div>
+</div> -->

@@ -1,0 +1,56 @@
+.calendar-container {
+	padding: .5rem;
+	display: flex;
+	flex-direction: row;
+	overflow-x: auto;
+
+	.calendar-day {
+		display: flex;
+		flex-direction: column;
+		margin: 0 1rem;
+		min-height: 50vh;
+		min-width: 30vh;
+
+		color: rgba(#000, 0.87);
+
+		.date {
+			color: rgba(#000, 0.5);
+
+			&.year {
+				// 
+			}
+
+			&.month {
+				// 
+			}
+
+			&.day {
+				display: block;
+				font-size: 6rem;
+				font-weight: 100;
+				color: #4CAF50;
+			}
+
+			&.weekday {
+				// 
+			}
+		}
+
+		hr {
+			border: none;
+			border-top: 1px solid rgba(#000, 0.1);
+			width: 50%;
+		}
+
+		.topic {
+			font-weight: 100;
+		}
+
+		.attend {
+			display: flex;
+			flex-direction: column;
+			flex-grow: 2;
+			justify-content: flex-end;
+		}
+	}
+}

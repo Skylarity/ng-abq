@@ -29,6 +29,10 @@ body {
 	background: #f0f0f0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 100;
+}
+
 /* MATERIAL OVERRIDES */
 md-card {
 	max-width: 80%;
@@ -71,19 +75,27 @@ md-card {
 .content {
 	display: flex;
 	padding: 1rem;
+
+	@media screen and (max-width: $break-sm) {
+		padding: 0;
+	}
 }
 
 .left-column {
 	display: none;
+	flex-direction: column;
+	flex-grow: 1;
 	width: 20%;
 
 	@media screen and (min-width: $break-lg) {
-		display: inline-block;
+		display: flex;
 	}
 }
 
 .main-column {
-	display: inline-block;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
 	width: 100%;
 
 	@media screen and (min-width: $break-lg) {
