@@ -1,0 +1,6 @@
+<div class="post-list">
+	<md-card class="post" *ngFor="let post of posts; let i = index">
+		<h2>{{ post.title }}</h2>
+		<small>{{ post.author }} &mdash; {{ post.date | date }}</small>
+	</md-card>
+</div>

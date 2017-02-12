@@ -11,6 +11,7 @@ import { EventsComponent } from './events/events.component';
 import { HeaderComponent } from './header/header.component';
 import { NewsComponent } from './news/news.component';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { PostsComponent } from './posts/posts.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SignInComponent } from './sign-in/sign-in.component';
     EventsComponent,
     HeaderComponent,
     NewsComponent,
-    SignInComponent
+    SignInComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +31,10 @@ import { SignInComponent } from './sign-in/sign-in.component';
       {
         path: 'events',
         component: EventsComponent
+      },
+      {
+        path: 'posts',
+        component: PostsComponent
       }
     ])
   ],
