@@ -1,0 +1,11 @@
+<md-toolbar color="primary">
+	<span [routerLink]="['/']" class="brand">
+		<md-icon>face</md-icon>
+		ng-abq
+	</span>
+	<span>
+		<button [routerLink]="['/events']" md-button><md-icon>event</md-icon> Events</button>
+		<button [routerLink]="['/posts']" md-button><md-icon>description</md-icon> Posts</button>
+		<button (click)="openSignIn()" md-button><md-icon>person</md-icon> Sign In</button>
+	</span>
+</md-toolbar>

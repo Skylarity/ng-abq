@@ -1,14 +1,9 @@
-<div>
-	<md-toolbar color="primary">
-		<span [routerLink]="['/']" class="brand">
-			<md-icon>face</md-icon>
-			ng-abq
-		</span>
-		<span>
-			<button [routerLink]="['/events']" md-button><md-icon>event</md-icon> Events</button>
-			<!-- <button [routerLink]="['/members']" md-button><md-icon>group</md-icon> Members</button> -->
-			<!-- <button [routerLink]="['/sign-in']" md-button><md-icon>person</md-icon> Sign In</button> -->
-		</span>
-	</md-toolbar>
+<app-header></app-header>
+<div class="content">
+	<div class="left-column">
+		<app-news></app-news>
+	</div>
+	<div class="main-column">
+		<router-outlet></router-outlet>
+	</div>
 </div>
-<router-outlet></router-outlet>
