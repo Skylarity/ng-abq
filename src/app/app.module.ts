@@ -13,6 +13,8 @@ import { NewsComponent } from './news/news.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { PostsComponent } from './posts/posts.component';
 
+import { EventService } from './events/event.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +40,7 @@ import { PostsComponent } from './posts/posts.component';
       }
     ])
   ],
-  providers: [],
+  providers: [EventService],
   bootstrap: [AppComponent],
   entryComponents: [
     SignInComponent
